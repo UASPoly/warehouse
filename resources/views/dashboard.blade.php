@@ -17,15 +17,30 @@
           </div>
           <div class="col-lg-4">
             <p>Orders</p>
-            <h2><span class="number" data-number="216422"></span></h2>
+            <h2><span class="number" data-number="{{Auth::user()->orders()}}"></span></h2>
           </div>
           <div class="col-lg-4">
             <p>Transactions</p>
-            <h2><span class="number" data-number="73"></span></h2>
+            <h2><span class="number" data-number="{{Auth::user()->transactions()}}"></span></h2>
           </div>
         </div>
-      
     @else
-
+    @foreach(App\Models\Category::all() as $category)
+      @foreach($category->products as $product)
+          <div class="col-md-4 col-lg-3 py-3 wow fadeInUp card shadow">
+            <div class="card-body">
+              <div class="center">
+                <img src="{{$product->productImage()}}" alt="" height="100" with="200" >
+              </div>
+              <div>
+                <h5>{{$product->name}}</h5>
+                <p><del># {{$product->price}}</del> #{{$product->presentPrice()}}</p>
+                <p>{{$product->discount}}% discount</p>
+                <p><a href="{{route('order.index')}}">Order Now</a></p>
+              </div>
+            </div>
+          </div>
+          @endforeach
+      @endforeach
     @endif
 </x-app-layout>

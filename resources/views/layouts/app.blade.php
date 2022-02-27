@@ -29,7 +29,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light navbar-float">
       <div class="container">
-        <a href="index.html" class="navbar-brand">Wire<span class="text-primary">House.</span></a>
+        <a href="index.html" class="navbar-brand">Inv<span class="text-primary">Entory.</span></a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>

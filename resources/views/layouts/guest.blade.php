@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="SISTRAC ID, https://sistrac.com">
 
-  <title>WireHouse</title>
+  <title>Inventory</title>
 
   <link rel="stylesheet" href="{{asset('assets/vendor/animate/animate.css')}}">
 

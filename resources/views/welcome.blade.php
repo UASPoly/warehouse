@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="SISTRAC ID, https://sistrac.com">
 
-  <title>WireHouse</title>
+  <title>{{config('app.name')}}</title>
 
   <link rel="stylesheet" href="{{asset('assets/vendor/animate/animate.css')}}">
 
@@ -29,7 +29,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-light navbar-float">
       <div class="container">
-        <a href="index.html" class="navbar-brand">Wire<span class="text-primary">House.</span></a>
+        <a href="index.html" class="navbar-brand">Inv<span class="text-primary">entory.</span></a>
 
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -262,10 +262,10 @@
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-lg-3 py-3">
-          <h3>Wire<span class="text-primary">House.</span></h3>
+          <h3>Inv<span class="text-primary">Evntory.</span></h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
-          <p><a href="#" >wirehouse@mail.com</a></p>
+          <p><a href="#" >isahlabb22@mail.com</a></p>
           <p><a href="#">08162463010</a></p>
         </div>
         <div class="col-lg-3 py-3">

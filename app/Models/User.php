@@ -59,6 +59,7 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+    
     public function store()
     {
         $items = 0;
@@ -68,5 +69,15 @@ class User extends Authenticatable
             }
         }
         return $items;
+    }
+
+    public function orders()
+    {
+        return count(Order::all());
+    }
+
+    public function transactions()
+    {
+        return count(Transaction::all());
     }
 }
