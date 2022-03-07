@@ -80,4 +80,18 @@ class User extends Authenticatable
     {
         return count(Transaction::all());
     }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    public function hasCart()
+    {
+        $flag = null;
+        foreach ($this->carts->where('status','pending') as $key => $value) {
+           $flag = true;
+        }
+        return $flag;
+    }
 }

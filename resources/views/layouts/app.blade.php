@@ -56,6 +56,11 @@
                             document.getElementById('logout-form').submit();" class="nav-link">
                         Log Out
                 </a></li>
+                @if(Auth::user()->hasCart())
+                    <li class="nav-item">
+                        <a href="{{ route('order.cart') }}" class="nav-link">My Cart</a>
+                    </li>
+                @endif
                 <form id="logout-form" method="POST" action="{{ route('logout') }}">
                     @csrf
                 </form>
@@ -72,10 +77,6 @@
         </div>
     </div>
   </main>
-
-  
-
-
   <script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
 
   <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>

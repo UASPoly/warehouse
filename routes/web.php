@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])
     ->prefix('/category')
     ->group(function (){
         Route::get('/', 'CategoryController@index')->name('index');
-        Route::get('//{categoryId}/delete', 'CategoryController@delete')->name('delete');
+        Route::get('/{categoryId}/delete', 'CategoryController@delete')->name('delete');
         Route::post('/register', 'CategoryController@register')->name('register');
         Route::post('/{categoryId}/update', 'CategoryController@update')->name('update');
     Route::name('product.')
@@ -43,5 +43,8 @@ Route::middleware(['auth:sanctum', 'verified'])
     ->name('order.')
     ->prefix('/order')
     ->group(function (){
+        Route::get('/{cartId}/place', 'OrderController@place')->name('place');
         Route::get('/', 'OrderController@index')->name('index');
+        Route::post('/add-to-cart', 'OrderController@addToCart')->name('addToCart');
+        Route::get('/cart', 'OrderController@viewCart')->name('cart');
 });    

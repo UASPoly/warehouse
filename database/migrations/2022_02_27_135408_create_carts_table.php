@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateOrdersTable extends Migration
+class CreateCartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('carts', function (Blueprint $table) {
             $table->id();
-            $table->integer('cart_id')
+            $table->integer('user_id')
             ->unsigned()
             ->nullable()
             ->foreign()
             ->references('id')
-            ->on('cart')
+            ->on('users')
             ->delete('restrict')
             ->update('cascade');
-            $table->string('amount')->nullable();
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }
@@ -35,6 +35,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('carts');
     }
 }

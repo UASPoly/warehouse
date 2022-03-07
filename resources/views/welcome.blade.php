@@ -262,7 +262,7 @@
     <div class="container">
       <div class="row justify-content-center mb-5">
         <div class="col-lg-3 py-3">
-          <h3>Inv<span class="text-primary">Evntory.</span></h3>
+          <h3>Inv<span class="text-primary">entory.</span></h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 
           <p><a href="#" >isahlabb22@mail.com</a></p>

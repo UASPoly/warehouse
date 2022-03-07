@@ -19,7 +19,8 @@
                 <h5>{{$product->name}}</h5>
                 <p><del># {{$product->price}}</del> #{{$product->presentPrice()}}</p>
                 <p>{{$product->discount}}% discount</p>
-                <p><a href="{{route('order.index')}}">Add To Card</a></p>
+                @include('category.product.cart.add')
+                <p><a href="#" data-toggle="modal" data-target="#product_{{$product->id}}">Add To Card</a></p>
               </div>
             </div>
           </div>
